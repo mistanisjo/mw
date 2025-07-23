@@ -222,7 +222,7 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
 
   /* Hero gradient background */
   .hero-gradient {
-    background: linear-gradient(135deg, #fdf2f8 0%, #ffffff 25%, #f3e8ff 50%, #fdf2f8 100%);
+    background: #ffffff;
     position: relative;
   }
 
