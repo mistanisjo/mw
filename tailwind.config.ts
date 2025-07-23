@@ -97,10 +97,10 @@ export default {
 						transform: 'translateY(0px) rotate(0deg)'
 					},
 					'33%': {
-						transform: 'translateY(-10px) rotate(1deg)'
+						transform: 'translateY(-3px) rotate(0.3deg)'
 					},
 					'66%': {
-						transform: 'translateY(-5px) rotate(-1deg)'
+						transform: 'translateY(-1px) rotate(-0.3deg)'
 					}
 				},
 				'liquid-flow': {
@@ -128,9 +128,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'liquid-float': 'liquid-float 6s ease-in-out infinite',
-				'liquid-flow': 'liquid-flow 8s ease-in-out infinite',
-				'liquid-pulse': 'liquid-pulse 4s ease-in-out infinite'
+				'liquid-float': 'liquid-float 3s ease-in-out infinite',
+				'liquid-flow': 'liquid-flow 4s ease-in-out infinite',
+				'liquid-pulse': 'liquid-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
