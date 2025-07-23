@@ -1,20 +1,9 @@
 import { ArrowRight, MapPin, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-tropical.jpg';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Tropical Paradise"
-          className="w-full h-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
-      </div>
-
       {/* Floating Glass Elements */}
       <div className="absolute top-20 left-10 liquid-glass w-16 h-16 rounded-full liquid-float opacity-30" />
       <div className="absolute top-40 right-20 liquid-glass w-12 h-12 rounded-full liquid-float-delay opacity-20" />
