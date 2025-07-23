@@ -27,7 +27,7 @@ const Hero = () => {
           <div className="flex justify-center mb-8">
             <div className="liquid-glass-card px-6 py-3 rounded-full flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                <Star className="w-4 h-4 text-primary fill-current" />
                 <span className="text-sm font-medium">4.9 Rating</span>
               </div>
               <div className="w-px h-4 bg-border" />
@@ -70,7 +70,7 @@ const Hero = () => {
               <p className="text-sm text-muted-foreground mb-2">Trusted by 50,000+ travelers</p>
               <div className="flex items-center justify-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                  <Star key={i} className="w-4 h-4 text-primary fill-current" />
                 ))}
                 <span className="ml-2 text-sm font-medium">Excellent Reviews</span>
               </div>

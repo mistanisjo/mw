@@ -102,7 +102,7 @@ const FeaturedDestinations = () => {
 
         {/* View All CTA */}
         <div className="text-center">
-          <Button size="lg" className="btn-liquid group text-slate-700">
+          <Button size="lg" className="btn-liquid group">
             View All Destinations
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>

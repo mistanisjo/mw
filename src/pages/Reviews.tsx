@@ -78,7 +78,7 @@ const ReviewsPage = () => {
       <Star
         key={i}
         className={`w-4 h-4 ${
-          i < rating ? 'text-yellow-500 fill-current' : 'text-muted-foreground'
+          i < rating ? 'text-primary fill-current' : 'text-muted-foreground'
         }`}
       />
     ));

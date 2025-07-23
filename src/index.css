@@ -19,21 +19,21 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
     --popover: 0 0% 100%;
     --popover-foreground: 215 27% 17%;
 
-    /* Primary - sophisticated deep slate */
-    --primary: 215 25% 27%;
+    /* Primary - brand red accent */
+    --primary: 358 85% 52%;
     --primary-foreground: 0 0% 98%;
 
     /* Secondary - soft glass tint */
     --secondary: 215 20% 95%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary-foreground: 358 85% 52%;
 
     /* Muted - subtle background tones */
     --muted: 215 16% 97%;
     --muted-foreground: 215 13% 55%;
 
-    /* Accent - premium highlight */
-    --accent: 215 20% 93%;
-    --accent-foreground: 215 25% 27%;
+    /* Accent - brand complement */
+    --accent: 358 30% 95%;
+    --accent-foreground: 358 85% 52%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -41,14 +41,14 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
     /* Subtle borders for glass effects */
     --border: 215 15% 89%;
     --input: 215 15% 89%;
-    --ring: 215 25% 27%;
+    --ring: 358 85% 52%;
 
     --radius: 0.75rem;
 
     /* Custom liquid glass design tokens */
     --glass-background: 0 0% 100% / 0.25;
     --glass-border: 0 0% 100% / 0.18;
-    --glass-shadow: 215 50% 60% / 0.15;
+    --glass-shadow: 358 45% 55% / 0.12;
     
     /* Liquid animation curves */
     --liquid-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -59,14 +59,14 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
     --glass-blur-hover: 15px;
     
     /* Premium gradients for liquid effects */
-    --gradient-liquid: linear-gradient(135deg, hsl(215 50% 95%), hsl(215 30% 90%));
-    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.4), hsl(215 20% 95% / 0.2));
-    --gradient-hero: linear-gradient(180deg, hsl(215 50% 98%), hsl(215 30% 96%));
+    --gradient-liquid: linear-gradient(135deg, hsl(358 20% 95%), hsl(358 15% 90%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.4), hsl(358 15% 95% / 0.2));
+    --gradient-hero: linear-gradient(180deg, hsl(358 10% 98%), hsl(358 8% 96%));
     
     /* Floating shadows */
-    --shadow-glass: 0 8px 32px hsl(215 50% 60% / 0.12);
-    --shadow-glass-hover: 0 12px 40px hsl(215 50% 60% / 0.18);
-    --shadow-soft: 0 1px 3px hsl(215 25% 27% / 0.08);
+    --shadow-glass: 0 8px 32px hsl(358 45% 55% / 0.12);
+    --shadow-glass-hover: 0 12px 40px hsl(358 50% 60% / 0.18);
+    --shadow-soft: 0 1px 3px hsl(358 85% 52% / 0.08);
     
     /* Typography scale */
     --font-size-xs: 0.75rem;
@@ -83,7 +83,7 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 358 85% 52%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
@@ -93,7 +93,7 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 358 85% 52%;
   }
 
   .dark {
@@ -106,8 +106,8 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 358 85% 52%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -115,23 +115,23 @@ All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 358 20% 15%;
+    --accent-foreground: 358 85% 52%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 358 85% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 358 85% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 358 85% 52%;
   }
 }
 
