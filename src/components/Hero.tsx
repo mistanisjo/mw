@@ -12,7 +12,7 @@ const Hero = () => {
           alt="Tropical Paradise"
           className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
       </div>
 
       {/* Floating Glass Elements */}
