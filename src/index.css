@@ -2,41 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Magic World Travel Agency Design System
+All colors MUST be HSL. Liquid glass morphism with Apple-inspired aesthetics.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Apple-inspired light mode palette */
+    --background: 0 0% 99%;
+    --foreground: 215 27% 17%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass morphism card backgrounds */
+    --card: 0 0% 98%;
+    --card-foreground: 215 27% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 27% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - sophisticated deep slate */
+    --primary: 215 25% 27%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - soft glass tint */
+    --secondary: 215 20% 95%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - subtle background tones */
+    --muted: 215 16% 97%;
+    --muted-foreground: 215 13% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - premium highlight */
+    --accent: 215 20% 93%;
+    --accent-foreground: 215 25% 27%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Subtle borders for glass effects */
+    --border: 215 15% 89%;
+    --input: 215 15% 89%;
+    --ring: 215 25% 27%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom liquid glass design tokens */
+    --glass-background: 0 0% 100% / 0.25;
+    --glass-border: 0 0% 100% / 0.18;
+    --glass-shadow: 215 50% 60% / 0.15;
+    
+    /* Liquid animation curves */
+    --liquid-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --liquid-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Glass blur values */
+    --glass-blur: 10px;
+    --glass-blur-hover: 15px;
+    
+    /* Premium gradients for liquid effects */
+    --gradient-liquid: linear-gradient(135deg, hsl(215 50% 95%), hsl(215 30% 90%));
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.4), hsl(215 20% 95% / 0.2));
+    --gradient-hero: linear-gradient(180deg, hsl(215 50% 98%), hsl(215 30% 96%));
+    
+    /* Floating shadows */
+    --shadow-glass: 0 8px 32px hsl(215 50% 60% / 0.12);
+    --shadow-glass-hover: 0 12px 40px hsl(215 50% 60% / 0.18);
+    --shadow-soft: 0 1px 3px hsl(215 25% 27% / 0.08);
+    
+    /* Typography scale */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +141,162 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* Liquid Glass Morphism Components */
+@layer components {
+  /* Core glass morphism effect */
+  .liquid-glass {
+    background: hsl(var(--glass-background));
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+    transition: all 400ms var(--liquid-ease);
+  }
+
+  .liquid-glass:hover {
+    backdrop-filter: blur(var(--glass-blur-hover));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glass-hover);
+  }
+
+  /* Liquid glass variants */
+  .liquid-glass-soft {
+    background: hsl(var(--muted) / 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .liquid-glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+    transition: all 300ms var(--liquid-ease);
+  }
+
+  .liquid-glass-card:hover {
+    transform: translateY(-4px);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-glass-hover);
+  }
+
+  /* Liquid flow animations */
+  .liquid-float {
+    animation: liquidFloat 6s ease-in-out infinite;
+  }
+
+  .liquid-float-delay {
+    animation: liquidFloat 6s ease-in-out 2s infinite;
+  }
+
+  .liquid-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-ripple::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 600ms var(--liquid-ease-out);
+  }
+
+  .liquid-ripple:hover::before {
+    left: 100%;
+  }
+
+  /* Navigation glass */
+  .nav-glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(20px) saturate(1.8);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+
+  /* Button variants with liquid effects */
+  .btn-liquid {
+    background: var(--gradient-liquid);
+    backdrop-filter: blur(8px);
+    transition: all 300ms var(--liquid-ease);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-liquid:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glass);
+    backdrop-filter: blur(12px);
+  }
+
+  .btn-liquid-primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    transition: all 300ms var(--liquid-ease);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-liquid-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glass);
+    background: hsl(var(--primary) / 0.9);
+  }
+}
+
+/* Liquid animations */
+@layer utilities {
+  @keyframes liquidFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-5px) rotate(-1deg);
+    }
+  }
+
+  @keyframes liquidFlow {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+
+  @keyframes liquidPulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+  }
+
+  /* Responsive liquid spacing */
+  .liquid-spacing {
+    @apply px-4 py-6 md:px-8 md:py-10 lg:px-12 lg:py-16;
+  }
+
+  .liquid-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

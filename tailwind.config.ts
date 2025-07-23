@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom liquid glass colors
+				glass: {
+					background: 'hsl(var(--glass-background))',
+					border: 'hsl(var(--glass-border))',
+					shadow: 'hsl(var(--glass-shadow))'
 				}
 			},
 			borderRadius: {
@@ -84,11 +90,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				// Liquid glass animations
+				'liquid-float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'33%': {
+						transform: 'translateY(-10px) rotate(1deg)'
+					},
+					'66%': {
+						transform: 'translateY(-5px) rotate(-1deg)'
+					}
+				},
+				'liquid-flow': {
+					'0%': {
+						borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'
+					},
+					'50%': {
+						borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%'
+					},
+					'100%': {
+						borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'
+					}
+				},
+				'liquid-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.02)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'liquid-float': 'liquid-float 6s ease-in-out infinite',
+				'liquid-flow': 'liquid-flow 8s ease-in-out infinite',
+				'liquid-pulse': 'liquid-pulse 4s ease-in-out infinite'
 			}
 		}
 	},
