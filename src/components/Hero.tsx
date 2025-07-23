@@ -1,69 +1,145 @@
-import { ArrowRight, MapPin, Star } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Floating Glass Elements */}
-      <div className="absolute top-20 left-10 liquid-glass w-16 h-16 rounded-full liquid-float opacity-30" />
-      <div className="absolute top-40 right-20 liquid-glass w-12 h-12 rounded-full liquid-float-delay opacity-20" />
-      <div className="absolute bottom-40 left-20 liquid-glass w-20 h-20 rounded-full liquid-float opacity-25" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-purple-50">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Dotted path lines */}
+        <svg className="absolute top-20 right-1/4 w-64 h-64 opacity-30" viewBox="0 0 200 200">
+          <path
+            d="M20,100 Q100,20 180,100 Q100,180 20,100"
+            fill="none"
+            stroke="#e879f9"
+            strokeWidth="2"
+            strokeDasharray="4,4"
+          />
+        </svg>
+        
+        {/* Floating elements */}
+        <div className="absolute top-16 right-1/3 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+          <Play className="w-4 h-4 text-white fill-current" />
+        </div>
+        
+        <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+          <div className="w-2 h-2 bg-white rounded-full" />
+        </div>
+      </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 liquid-container text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Stats Cards */}
-          <div className="flex justify-center mb-8">
-            <div className="liquid-glass-card px-6 py-3 rounded-full flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-primary fill-current" />
-                <span className="text-sm font-medium">4.9 Rating</span>
+      <div className="liquid-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center space-x-2 bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-medium">
+              <span>Explore the world</span>
+              <div className="w-4 h-4 bg-pink-500 rounded-full flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full" />
               </div>
-              <div className="w-px h-4 bg-border" />
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">150+ Destinations</span>
-              </div>
+            </div>
+
+            {/* Main Heading */}
+            <div className="space-y-2">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                From
+              </h1>
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Southeast Asia
+              </h1>
+              <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-tight">
+                to the World.
+              </h1>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+              Stay updated with travel tips, recommendations, and latest 
+              promos!
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium"
+              >
+                Get Started
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50 flex items-center space-x-2"
+              >
+                <Play className="w-4 h-4 fill-current" />
+                <span>Watch Demo</span>
+              </Button>
             </div>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 liquid-float">
-            <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
-              Discover Your
-            </span>
-            <br />
-            <span className="text-foreground">Magic World</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Embark on extraordinary journeys to the world's most breathtaking destinations. 
-            Experience luxury, adventure, and memories that last a lifetime.
-          </p>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="btn-liquid-primary group px-8 py-3 text-lg">
-              Explore Destinations
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="liquid-glass-card px-8 py-3 text-lg">
-              Watch Our Story
-            </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-12 flex justify-center">
-            <div className="liquid-glass-soft px-8 py-4 rounded-2xl">
-              <p className="text-sm text-muted-foreground mb-2">Trusted by 50,000+ travelers</p>
-              <div className="flex items-center justify-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-primary fill-current" />
-                ))}
-                <span className="ml-2 text-sm font-medium">Excellent Reviews</span>
+          {/* Right Content - Image Collage */}
+          <div className="relative">
+            {/* Main container for images */}
+            <div className="relative w-full h-96 lg:h-[500px]">
+              {/* Top left - Tropical beach */}
+              <div className="absolute top-0 left-0 w-48 h-32 rounded-2xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  alt="Tropical beach"
+                  className="w-full h-full object-cover"
+                />
               </div>
+
+              {/* Top right - Mountain sunset */}
+              <div className="absolute top-8 right-0 w-44 h-36 rounded-2xl overflow-hidden shadow-lg transform rotate-6 hover:rotate-3 transition-transform duration-300">
+                <img 
+                  src="https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  alt="Mountain sunset"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Middle left - Temple */}
+              <div className="absolute top-32 left-12 w-52 h-40 rounded-2xl overflow-hidden shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  alt="Temple"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Bottom right - Mosque */}
+              <div className="absolute bottom-0 right-8 w-48 h-36 rounded-2xl overflow-hidden shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                <img 
+                  src="https://images.pexels.com/photos/3243090/pexels-photo-3243090.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  alt="Mosque"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Decorative dotted path */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
+                <path
+                  d="M50,50 Q200,100 350,150 Q250,250 150,350"
+                  fill="none"
+                  stroke="#e879f9"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                  opacity="0.4"
+                />
+              </svg>
             </div>
+          </div>
+        </div>
+
+        {/* Partner Logos */}
+        <div className="mt-20 pt-12 border-t border-gray-200">
+          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
+            <div className="text-gray-500 font-medium text-sm">traveloka</div>
+            <div className="text-gray-500 font-medium text-sm">tiket.com</div>
+            <div className="text-gray-500 font-medium text-sm">Booking.com</div>
+            <div className="text-gray-500 font-medium text-sm">tripadvisor</div>
+            <div className="text-gray-500 font-medium text-sm">airbnb</div>
           </div>
         </div>
       </div>
